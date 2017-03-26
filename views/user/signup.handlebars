@@ -1,0 +1,23 @@
+
+<div class="loginRegisterForm">
+  <h1>User Sign Up Page</h1>
+  {{#if hasErrors}}
+    <div class="alert alert-danger">
+      {{#each messages}}
+        <p>{{this}}</p>
+      {{/each}}
+    </div>
+  {{/if}}
+    <div class="thumbnail"><img src="/images/login.png"/></div>
+    <form action="/user/signup" method="post" class="login-form">
+
+      <input type="text" name="firstName" placeholder="First Name"/>
+      <input type="text" name="lastName" placeholder="Last Name"/>
+      <input type="email" name="email" placeholder="Email"/>
+      <input type="password" name="password" placeholder="Password"/>
+
+      <button type="submit">Sign Up</button>
+      <p class="message">Want to login? <a href="/user/login">Login here</a></p>
+      <p class="message">Become a Chef? <a href="/chef/signup">Become a Chef</a></p>
+    </form>
+  </div>

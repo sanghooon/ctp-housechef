@@ -1,0 +1,20 @@
+
+<div class="loginRegisterForm">
+  <h1>Chef Login Page</h1>
+  {{#if hasErrors}}
+    <div class="alert alert-danger">
+      {{#each messages}}
+        <p>{{this}}</p>
+      {{/each}}
+    </div>
+  {{/if}}
+    <div class="thumbnail"><img src="/images/chef1.png"/></div>
+    <form action="/chef/login" method="post" class="login-form">
+
+      <input type="email" name="email" placeholder="Email"/>
+      <input type="password" name="password" placeholder="Password"/>
+
+      <button type="submit">Login</button>
+      <p class="message">Not Registered? <a href="/chef/signup">Register</a></p>
+    </form>
+  </div>

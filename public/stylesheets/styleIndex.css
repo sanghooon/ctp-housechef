@@ -1,0 +1,225 @@
+body{
+    font-family: "Brandon Grotesque","Roboto", sans-serif;
+}
+/* NAVBAR */
+.navbar-brand,
+.navbar-nav li a {
+  line-height: 70px;
+  height: 70px;
+  padding-top: 0;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+}
+
+.navbar-fluid {
+  background-color: transparent;
+  border-bottom: 1px solid #bbb;
+}
+.scrolling {
+  background-color: white;
+  color: black !important;
+}
+.navbar-nav li {
+  margin-right: 10px;
+}
+.becomeChef {
+  font-size: 18px;
+  margin-top: 13%;
+  height: 35px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+}
+/* NAVBAR */
+
+/* main.hbs */
+#main {
+  display: table;
+  position: relative;
+	background: url(https://s-media-cache-ak0.pinimg.com/originals/db/7c/c5/db7cc55451a71c4bf9129a2226693018.jpg);
+  background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	width: 100%;
+}
+#main-header {
+	margin-top: 180px;
+	color: white;
+	text-align: center;
+	margin-bottom: 65px;
+  text-shadow: 2px 2px 4px black;
+}
+
+.easy-access {
+  width: 100%;
+	margin: 0 auto;
+}
+
+#left-easy {
+  height: 80vh;
+  background-color: #a8ffed;
+  transition: 1s;
+  text-decoration: none;
+}
+#left-easy:hover {
+  background-color: #0080ff;
+  transition: 1s;
+}
+#right-easy {
+  height: 80vh;
+  background-color: #a8afed;
+  transition: 1s;
+  text-decoration: none;
+}
+#right-easy:hover {
+  background-color: #bf00ff;
+  transition: 1s;
+}
+
+#explanation {
+	margin-top: 60px;
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+#explanation h5 {
+	margin-bottom: 30px;
+}
+.main-thumbnail {
+  border: 0 none;
+}
+.main-thumbnail img {
+  display: block;
+	height: 30vh;
+	width: 30vh;
+  margin: auto;
+}
+.main-description {
+  color: #7f7f7f;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer {
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	font-size: 14px;
+}
+/* main.hbs */
+
+/* SEARCH */
+#left-search {
+  height: 100vh;
+  background-color: #e8e8e8;
+}
+
+#right-search {
+  height: 100vh;
+}
+#right-search table, th, td {
+  border: 1px solid black;
+}
+
+#right-search a {
+  font-size: 24px;
+  color: black;
+}
+.media img {
+  height: 20vh;
+}
+.media .rating span{
+  font-size: 24px;
+}
+/* SEARCH */
+
+ /* LOGIN AND REGISTER */
+
+.loginRegisterForm {
+   position: relative;
+   z-index: 1;
+   background: #d9d9d9;
+   max-width: 300px;
+   margin: 100px auto;
+   padding: 30px;
+   border-top-left-radius: 3px;
+   border-top-right-radius: 3px;
+   border-bottom-left-radius: 3px;
+   border-bottom-right-radius: 3px;
+   text-align: center;
+ }
+.loginRegisterForm .thumbnail {
+   width: 100%;
+   height: 100%;
+   margin: 0 auto 30px;
+   border-top-left-radius: 100%;
+   border-top-right-radius: 100%;
+   border-bottom-left-radius: 100%;
+   border-bottom-right-radius: 100%;
+   box-sizing: border-box;
+ }
+.loginRegisterForm .thumbnail img {
+   height:auto;
+   width: 100%;
+ }
+.loginRegisterForm input {
+   background: #FFFFFF;
+   color: black;
+   width: 100%;
+   border: 0;
+   margin: 0 0 15px;
+   padding: 15px;
+   border-top-left-radius: 3px;
+   border-top-right-radius: 3px;
+   border-bottom-left-radius: 3px;
+   border-bottom-right-radius: 3px;
+   box-sizing: border-box;
+   font-size: 14px;
+ }
+.loginRegisterForm button {
+   outline: 0;
+   background: #39acef;
+   width: 100%;
+   border: 0;
+   padding: 15px;
+   border-top-left-radius: 3px;
+   border-top-right-radius: 3px;
+   border-bottom-left-radius: 3px;
+   border-bottom-right-radius: 3px;
+   color: #FFFFFF;
+   font-size: 14px;
+   -webkit-transition: all 0.3 ease;
+   transition: all 0.3 ease;
+   cursor: pointer;
+ }
+.loginRegisterForm .message {
+   margin: 15px 0 0;
+   color: white;
+   font-size: 12px;
+ }
+.loginRegisterForm .message a {
+   color: #39acef;
+   text-decoration: none;
+ }
+.loginRegisterForm .register-form {
+   display: none;
+ }
+.alert {
+  text-align: center;
+}
+
+
+
+/* FOOTER */
+.footer {
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	font-size: 14px;
+}
