@@ -10,7 +10,12 @@ var chefSchema = mongoose.Schema({
   //photo: { type: String, required: true },
   dateOfBirth: { type: String, required: true },
   headline: { type: String, required: true },
-  description: { type: String, required: true }
+  description: { type: String, required: true },
+  dishes: [{
+    dishTitle: { type: String, required: true},
+    dishDescription: { type: String, required: true},
+    dishPrice: { type: String, required: true}
+  }]
   //service: { type: String, required: true },
 });
 
