@@ -3,6 +3,7 @@
   <h3>{{chef.firstName}} {{chef.lastName}}</h3>
   <h4>{{chef.headline}}</h4>
   <span>☆☆☆☆☆</span>
+  <hr>
   <div id="chef-reviews">
     <table>
       <tbody>
@@ -36,6 +37,7 @@
   <h3>Description</h3>
   <h4>{{chef.description}} Lorem ipsum dolor sit amet, consectetur adipisicing elit. A tenetur odit ad perferendis eos temporibus deleniti placeat dicta, adipisci nostrum minus hic ea atque accusantium repellat eius tempora sequi eaque.</h4>
   <button id="contact-chef">Contact Chef</button>
+  <hr>
   <table id="cook-book">
     <h1>CookBook</h1>
     <tbody>
@@ -100,12 +102,12 @@
       </tr>
     </tbody>
   </table>
-<button id="new-dish-button">New Dish</button>
-<form id="new-dish-form" action="">
+<hr>
+<form id="new-dish-form" method="post">
   <h2>New Dish Form</h2>
   <div class="form-group">
     <label for="new-dish-title">Title</label>
-    <input class="form-control"type="text" placeholder="Title"/>
+    <input class="form-control" type="text" placeholder="Title"/>
   </div>
   <div class="form-group">
     <label for="new-dish-title">Description</label>
@@ -120,6 +122,5 @@
     <input class="form-control-file" type="file" />
   </div>
   <button type="submit" class="btn btn-primary">Add</button>
-  <button id="hide-form" class="btn btn-warning">Hide</button>
 </form>
 </div>

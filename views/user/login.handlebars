@@ -1,20 +1,123 @@
+<div class="col-3	col-sm-3 col-md-3	col-lg-3 col-xl-3" id="profile-left">
+  <img id="profile-pic"src="http://acc.aub.edu.lb/wp-content/uploads/2016/12/empty-profile.png" alt="" />
+  <h3>{{user.firstName}} {{user.lastName}}</h3>
+  <div id="chef-reviews">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+              <h3>Food was awesome!</h3>
+              <h4> by Stephanie</h4>
+              <span>☆☆☆☆☆</span>
 
-<div class="loginRegisterForm">
-  <h1>User Login Page</h1>
-  {{#if hasErrors}}
-    <div class="alert alert-danger">
-      {{#each messages}}
-        <p>{{this}}</p>
-      {{/each}}
-    </div>
-  {{/if}}
-    <div class="thumbnail"><img src="/images/login.png"/></div>
-    <form action="/user/login" method="post" class="login-form">
-
-      <input type="email" name="email" placeholder="Email"/>
-      <input type="password" name="password" placeholder="Password"/>
-
-      <button type="submit">Login</button>
-      <p class="message">Not Registered? <a href="/user/signup">Register</a></p>
-    </form>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3>Cool Experience!</h3>
+            <h4> by Jose</h4>
+            <span>☆☆☆☆☆</span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3>I love this chef!</h3>
+            <h4> by Martin</h4>
+            <span>☆☆☆☆☆</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+   </div>
+</div>
+<div class="col-9	col-sm-9 col-md-9	col-lg-9 col-xl-9" id="profile-right">
+  <h3>Description</h3>
+  <h4>{{chef.description}} Lorem ipsum dolor sit amet, consectetur adipisicing elit. A tenetur odit ad perferendis eos temporibus deleniti placeat dicta, adipisci nostrum minus hic ea atque accusantium repellat eius tempora sequi eaque.</h4>
+  <button id="contact-chef">Contact Chef</button>
+  <table id="cook-book">
+    <h1>CookBook</h1>
+    <tbody>
+      <tr>
+        <td>
+          <a id="dish" href="#">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" id="dish-img" src="https://i1.wp.com/caughtinbetweenmom.files.wordpress.com/2017/01/curry-chicken.jpg?w=128&h=128&crop=1&ssl=1" alt="...">
+            </div>
+            <div class="media-body">
+              <span id="dish-title">Chicken over Rice Hallal</span>
+              <div class="rating">
+                <span>☆☆☆☆☆</span>
+              </div>
+            </div>
+            <div class="media-right">
+              <span id="dish-price">$10</span>
+            </div>
+          </div>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a id="dish" href="#">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" id="dish-img" src="https://s-media-cache-ak0.pinimg.com/736x/a7/4b/5e/a74b5e6343b8ef89f39605d0790c1d39.jpg" alt="...">
+            </div>
+            <div class="media-body">
+              <span id="dish-title">Spaghetti with tomato sauce and potatoes</span>
+              <div class="rating">
+                <span>☆☆☆☆☆</span>
+              </div>
+            </div>
+            <div class="media-right">
+              <span id="dish-price">$25</span>
+            </div>
+          </div>
+        </a>
+      </tr>
+      <tr>
+        <td>
+          <a id="dish" href="#">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" id="dish-img" src="http://images.bigoven.com/image/upload/t_recipe-256/koreanbbqkalbi-ee4064.jpg" alt="...">
+            </div>
+            <div class="media-body">
+              <span id="dish-title">Korean Galbi with some Samjjang</span>
+              <div class="rating">
+                <span>☆☆☆☆☆</span>
+              </div>
+            </div>
+            <div class="media-right">
+              <span id="dish-price">$30</span>
+            </div>
+          </div>
+         </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<button id="new-dish-button">New Dish</button>
+<form id="new-dish-form" action="">
+  <h2>New Dish Form</h2>
+  <div class="form-group">
+    <label for="new-dish-title">Title</label>
+    <input class="form-control"type="text" placeholder="Title"/>
   </div>
+  <div class="form-group">
+    <label for="new-dish-title">Description</label>
+    <textarea class="form-control" placeholder="Description" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="new-dish-price">Price</label>
+    <input class="form-control" placeholder="Price" type="number" />
+  </div>
+  <div class="form-group">
+    <label for="new-dish-img">Image</label>
+    <input class="form-control-file" type="file" />
+  </div>
+  <button type="submit" class="btn btn-primary">Add</button>
+  <button id="hide-form" class="btn btn-warning">Hide</button>
+</form>
+</div>

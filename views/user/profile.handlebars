@@ -1,2 +1,75 @@
-<h1>User Profile Page</h1>
-<h3>Hello {{user.email}}</h3>
+<div class="col-3	col-sm-3 col-md-3	col-lg-3 col-xl-3" id="profile-left">
+  <img id="profile-pic"src="http://acc.aub.edu.lb/wp-content/uploads/2016/12/empty-profile.png" alt="" />
+  <h3>{{user.email}}</h3>
+  <hr>
+</div>
+<div class="col-9	col-sm-9 col-md-9	col-lg-9 col-xl-9" id="profile-right">
+  <span class="btn-group">
+    <button id="contact-chef">Look for Chefs</button>
+    <button id="contact-chef">Refer Friends</button>
+  </span>
+  <table id="cook-book">
+    <h1>History</h1>
+    <tbody>
+      <tr>
+        <td>
+          <a id="dish" href="#">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" id="dish-img" src="https://i1.wp.com/caughtinbetweenmom.files.wordpress.com/2017/01/curry-chicken.jpg?w=128&h=128&crop=1&ssl=1" alt="...">
+            </div>
+            <div class="media-body">
+              <span id="dish-title">Chicken over Rice Hallal</span>
+              <div class="rating">
+                <span>☆☆☆☆☆</span>
+              </div>
+            </div>
+            <div class="media-right">
+              <span id="dish-price">$10</span>
+            </div>
+          </div>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a id="dish" href="#">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" id="dish-img" src="https://s-media-cache-ak0.pinimg.com/736x/a7/4b/5e/a74b5e6343b8ef89f39605d0790c1d39.jpg" alt="...">
+            </div>
+            <div class="media-body">
+              <span id="dish-title">Spaghetti with tomato sauce and potatoes</span>
+              <div class="rating">
+                <span>☆☆☆☆☆</span>
+              </div>
+            </div>
+            <div class="media-right">
+              <span id="dish-price">$25</span>
+            </div>
+          </div>
+        </a>
+      </tr>
+      <tr>
+        <td>
+          <a id="dish" href="#">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" id="dish-img" src="http://images.bigoven.com/image/upload/t_recipe-256/koreanbbqkalbi-ee4064.jpg" alt="...">
+            </div>
+            <div class="media-body">
+              <span id="dish-title">Korean Galbi with some Samjjang</span>
+              <div class="rating">
+                <span>☆☆☆☆☆</span>
+              </div>
+            </div>
+            <div class="media-right">
+              <span id="dish-price">$30</span>
+            </div>
+          </div>
+         </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

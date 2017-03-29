@@ -16,6 +16,15 @@ router.get('/search', (req, res, next) => {
   });
 });
 
+router.get('/search/:id', (req, res, next) => {
+  Chef.findById(req.params.id, (err, chef) => {
+    res.render('chef/profile', {
+      title: `Chef ${chef.firstName}`,
+      chef: chef
+    });
+  });
+});
+
 router.get('/profile', isLoggedIn, (req, res, next) => {
   console.log('CHEF PROFILE PAGE');
   res.render('chef/profile', {

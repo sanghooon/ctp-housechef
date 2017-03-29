@@ -267,7 +267,7 @@ table#chef-reviews th, td{
   padding: 10px;
 }
 #new-dish-form {
-  display:none;
+  display:block;
 }
 /* CHEF PROFILE */
 
