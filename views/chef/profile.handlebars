@@ -41,6 +41,28 @@
   <table id="cook-book">
     <h1>CookBook</h1>
     <tbody>
+      {{# each chef.dishes}}
+        <tr>
+          <td>
+            <div class="media">
+              <div class="media-left">
+                <img class="media-object" id="dish-img" src="https://i1.wp.com/caughtinbetweenmom.files.wordpress.com/2017/01/curry-chicken.jpg?w=128&h=128&crop=1&ssl=1" alt="...">
+              </div>
+              <div class="media-body">
+                <a href="#" id="dish-title">{{this.dishTitle}}</a>
+                <div class="rating">
+                  <span>☆☆☆☆☆</span>
+                </div>
+                <span id="dish-description">{{this.dishDescription}}</span>
+              </div>
+              <div class="media-right">
+                <span id="dish-price">${{this.dishPrice}}</span>
+                <button class="btn btn-primary" type="button" name="button">Add to Cart</button>
+              </div>
+            </div>
+          </td>
+        </tr>
+      {{/each}}
       <tr>
         <td>
           <a id="dish" href="#">
@@ -53,6 +75,7 @@
               <div class="rating">
                 <span>☆☆☆☆☆</span>
               </div>
+              <span id="dish-description">description</span>
             </div>
             <div class="media-right">
               <span id="dish-price">$10</span>
@@ -61,6 +84,7 @@
           </a>
         </td>
       </tr>
+
       <tr>
         <td>
           <a id="dish" href="#">
@@ -103,24 +127,28 @@
     </tbody>
   </table>
 <hr>
-<form id="new-dish-form" method="post">
-  <h2>New Dish Form</h2>
-  <div class="form-group">
-    <label for="new-dish-title">Title</label>
-    <input class="form-control" type="text" placeholder="Title"/>
-  </div>
-  <div class="form-group">
-    <label for="new-dish-title">Description</label>
-    <textarea class="form-control" placeholder="Description" rows="3"></textarea>
-  </div>
-  <div class="form-group">
-    <label for="new-dish-price">Price</label>
-    <input class="form-control" placeholder="Price" type="number" />
-  </div>
-  <div class="form-group">
-    <label for="new-dish-img">Image</label>
-    <input class="form-control-file" type="file" />
-  </div>
-  <button type="submit" class="btn btn-primary">Add</button>
-</form>
+
+{{#if isLoggedIn}}
+  <form id="new-dish-form" method="post">
+    <h2>New Dish Form</h2>
+    <div class="form-group">
+      <label for="dishTitle">Title</label>
+      <input id="dishTitle" name="dishTitle" class="form-control" type="text" placeholder="Title"/>
+    </div>
+    <div class="form-group">
+      <label for="dishDescription">Description</label>
+      <textarea id="dishDescription" name="dishDescription" class="form-control" placeholder="Description" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="dishPrice">Price</label>
+      <input id="dishPrice"name="dishPrice" class="form-control" placeholder="Price" type="number" />
+    </div>
+    <div class="form-group">
+      <label for="dishImg">Image</label>
+      <input id="dishImg" name="dishImg" class="form-control-file" type="file" />
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+{{/if}}
+
 </div>

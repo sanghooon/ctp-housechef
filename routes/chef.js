@@ -19,8 +19,9 @@ router.get('/search', (req, res, next) => {
 router.get('/search/:id', (req, res, next) => {
   Chef.findById(req.params.id, (err, chef) => {
     res.render('chef/profile', {
-      title: `Chef ${chef.firstName}`,
-      chef: chef
+      title: `Chef Profile`,
+      chef: chef,
+      isLoggedIn: res.locals.login
     });
   });
 });
@@ -29,8 +30,26 @@ router.get('/profile', isLoggedIn, (req, res, next) => {
   console.log('CHEF PROFILE PAGE');
   res.render('chef/profile', {
     title: 'Chef Profile',
-    chef: req.user
+    chef: req.user,
+    isLoggedIn: res.locals.login
   });
+});
+
+router.post('/profile', isLoggedIn, (req, res, next) => {
+  var dish = {
+    dishTitle: req.body.dishTitle,
+    dishDescription: req.body.dishDescription,
+    dishPrice: req.body.dishPrice
+  };
+  Chef.update(
+    { _id: req.user._id },
+    { $push: { dishes: dish} },
+    function(err, result) {
+      if(err) throw err;
+      console.log(result);
+    }
+  );
+  res.send(`CHEF ${req.user.email} ADDED DISH`);
 });
 
 router.get('/signup', notLoggedIn, (req, res, next) => {

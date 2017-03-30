@@ -258,6 +258,9 @@ table#chef-reviews th, td{
 #dish-title {
   float:center;
 }
+#dish-description {
+  font-size: 3vh;
+}
 #dish-price {
   float:right;
 }
