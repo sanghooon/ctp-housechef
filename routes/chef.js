@@ -52,6 +52,19 @@ router.post('/profile', isLoggedIn, (req, res, next) => {
   res.send(`CHEF ${req.user.email} ADDED DISH`);
 });
 
+router.delete('/profile/:id', isLoggedIn, (req, res, next) => {
+  var chefId = req.user._id;
+  var dishId = req.params.id;
+  Chef.update(
+    { _id: chefId },
+    { $pull: { dishes: { _id: dishId } } }, function(err, result) {
+      if(err) throw err;
+      console.log(result);
+    }
+  );
+  res.send('DELETED DISH');
+});
+
 router.get('/signup', notLoggedIn, (req, res, next) => {
   var messages = req.flash('error');
   res.render('chef/signup', {

@@ -1,8 +1,18 @@
 <nav>
   {{#if login}}
-    <h5>Logged in as {{user.email}} {{chef.email}}</h5>
+    {{#if chef}}
+      <h5>Logged in as {{chef.email}}</h5>
+      <a href="/chef/logout">Logout</a>
+    {{else}}
+      <h5>Logged in as {{user.email}}</h5>
+      <a href="#">Cart</a>
+      <a href="/user/logout">Logout</a>
+    {{/if}}
   {{else}}
     <h5>Not Logged In</h5>
+    <a href="/chef/login">Chef login</a>
+    <a href="/user/login">User login</a>
   {{/if}}
+
 
 </nav>

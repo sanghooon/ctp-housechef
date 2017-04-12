@@ -49,7 +49,7 @@
                 <img class="media-object" id="dish-img" src="https://i1.wp.com/caughtinbetweenmom.files.wordpress.com/2017/01/curry-chicken.jpg?w=128&h=128&crop=1&ssl=1" alt="...">
               </div>
               <div class="media-body">
-                <a href="#" id="dish-title">{{this.dishTitle}}</a>
+                <a href="#" id="dish-title">{{this.dishTitle}}</a> <p hidden id="dish-id" >{{this._id}}</p>
                 <div class="rating">
                   <span>☆☆☆☆☆</span>
                 </div>
@@ -58,72 +58,12 @@
               <div class="media-right">
                 <span id="dish-price">${{this.dishPrice}}</span>
                 <button class="btn btn-primary" type="button" name="button">Add to Cart</button>
+                <button class="delete-dish-form btn btn-danger">Remove</button>
               </div>
             </div>
           </td>
         </tr>
       {{/each}}
-      <tr>
-        <td>
-          <a id="dish" href="#">
-          <div class="media">
-            <div class="media-left">
-              <img class="media-object" id="dish-img" src="https://i1.wp.com/caughtinbetweenmom.files.wordpress.com/2017/01/curry-chicken.jpg?w=128&h=128&crop=1&ssl=1" alt="...">
-            </div>
-            <div class="media-body">
-              <span id="dish-title">Chicken over Rice Hallal</span>
-              <div class="rating">
-                <span>☆☆☆☆☆</span>
-              </div>
-              <span id="dish-description">description</span>
-            </div>
-            <div class="media-right">
-              <span id="dish-price">$10</span>
-            </div>
-          </div>
-          </a>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <a id="dish" href="#">
-          <div class="media">
-            <div class="media-left">
-              <img class="media-object" id="dish-img" src="https://s-media-cache-ak0.pinimg.com/736x/a7/4b/5e/a74b5e6343b8ef89f39605d0790c1d39.jpg" alt="...">
-            </div>
-            <div class="media-body">
-              <span id="dish-title">Spaghetti with tomato sauce and potatoes</span>
-              <div class="rating">
-                <span>☆☆☆☆☆</span>
-              </div>
-            </div>
-            <div class="media-right">
-              <span id="dish-price">$25</span>
-            </div>
-          </div>
-        </a>
-      </tr>
-      <tr>
-        <td>
-          <a id="dish" href="#">
-          <div class="media">
-            <div class="media-left">
-              <img class="media-object" id="dish-img" src="http://images.bigoven.com/image/upload/t_recipe-256/koreanbbqkalbi-ee4064.jpg" alt="...">
-            </div>
-            <div class="media-body">
-              <span id="dish-title">Korean Galbi with some Samjjang</span>
-              <div class="rating">
-                <span>☆☆☆☆☆</span>
-              </div>
-            </div>
-            <div class="media-right">
-              <span id="dish-price">$30</span>
-            </div>
-          </div>
-         </a>
-        </td>
-      </tr>
     </tbody>
   </table>
 <hr>
@@ -149,6 +89,7 @@
     </div>
     <button type="submit" class="btn btn-primary">Add</button>
   </form>
+  <hr>
 {{/if}}
 
 </div>
